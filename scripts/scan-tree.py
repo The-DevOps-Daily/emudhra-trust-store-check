@@ -65,7 +65,14 @@ for name, (_, b64) in ROOTS.items():
     # Raw DER (Bun, Go fallback) or the first 60 base64 characters, which come
     # before the first line break at the usual 64- and 72-column widths (Node).
     ROOT_NEEDLES[name] = [der, b64[:60].encode()]
-SPKI_NEEDLES = [bytes.fromhex(h) for h in BLOCKED_SPKI] + [h.encode() for h in BLOCKED_SPKI]
+# Each blocked key as raw bytes (Node.js, Bun, CPython) or as hex text (Go).
+SPKI_NEEDLES = [(bytes.fromhex(h), h.encode()) for h in BLOCKED_SPKI]
+# Strings found in every build of these runtimes, so a renamed binary is still recognised.
+RUNTIME_MARKERS = [
+    (b"--use-bundled-ca", "Node.js binary"),
+    (b"bun:sqlite", "Bun binary"),
+    (b"PyInit__ssl", "CPython ssl module"),
+]
 
 
 def go_version(mm):
@@ -87,36 +94,28 @@ def go_version(mm):
     return mm[j : j + n].decode(errors="replace")
 
 
-def scan_binary(path, size):
-    found = []
+def scan_binary(path):
     with open(path, "rb") as f:
         with mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ) as mm:
             embeds = [name for name, needles in ROOT_NEEDLES.items() if any(mm.find(n) >= 0 for n in needles)]
-            blocklist = sum(1 for n in SPKI_NEEDLES if mm.find(n) >= 0)
+            keys = sum(1 for raw, hexed in SPKI_NEEDLES if mm.find(raw) >= 0 or mm.find(hexed) >= 0)
             gov = go_version(mm)
             x509 = gov is not None and mm.find(b"crypto/x509.(*Certificate).Verify") >= 0
+            runtime = next((label for marker, label in RUNTIME_MARKERS if mm.find(marker) >= 0), None) or runtime_by_name(path)
+    if keys == len(SPKI_NEEDLES):
+        extra = f"; it also embeds {' and '.join(embeds)}, but rejects the keys" if embeds else ""
+        return [("ok", f"carries the eMudhra SPKI blocklist (all {keys} keys){extra}")]
+    found = []
     if embeds:
         found.append(("TRUSTS", f"embeds {' and '.join(embeds)} in its bundled roots"))
-    if blocklist >= 8:
-        found.append(("ok", "carries the eMudhra SPKI blocklist (all 8 keys)"))
+    if keys:
+        found.append(("TRUSTS*", f"holds only {keys} of the {len(SPKI_NEEDLES)} blocked keys: check it by hand"))
     elif gov and x509:
         found.append(("TRUSTS*", f"Go program ({gov}) with crypto/x509 and no eMudhra blocklist: "
                       "it accepts whatever its trust store accepts"))
-    elif not embeds and runtime_name(path):
-        found.append(("TRUSTS*", f"{runtime_name(path)} without the eMudhra blocklist: "
-                      "it accepts whatever its trust store accepts"))
+    elif runtime and not embeds:
+        found.append(("TRUSTS*", f"{runtime} without the eMudhra blocklist: it accepts whatever its trust store accepts"))
     return found
-
-
-def runtime_name(path):
-    n = os.path.basename(path)
-    if n in ("node", "nodejs"):
-        return "Node.js binary"
-    if n == "bun":
-        return "Bun binary"
-    if n.startswith("_ssl.") and n.endswith((".so", ".pyd")):
-        return "CPython ssl module"
-    return None
 
 
 def scan_bundle(path):
@@ -144,7 +143,18 @@ def walk(top):
             yield os.path.join(d, fn)
 
 
-def classify(path):
+def runtime_by_name(path):
+    n = os.path.basename(path)
+    if n in ("node", "nodejs"):
+        return "Node.js binary"
+    if n == "bun":
+        return "Bun binary"
+    if n.startswith("_ssl.") and n.endswith((".so", ".pyd")):
+        return "CPython ssl module"
+    return None
+
+
+def classify(path, skipped):
     try:
         st = os.lstat(path)
     except OSError:
@@ -154,36 +164,51 @@ def classify(path):
     name = os.path.basename(path).lower()
     with open(path, "rb") as f:
         head = f.read(4096)
-    if head[:4] in (b"\x7fELF", b"\xcf\xfa\xed\xfe", b"MZ\x90\x00") and st.st_size <= BINARY_LIMIT:
-        return scan_binary(path, st.st_size)
+    if head[:4] in (b"\x7fELF", b"\xcf\xfa\xed\xfe", b"MZ\x90\x00"):
+        if st.st_size > BINARY_LIMIT:
+            skipped.append(path)
+            return []
+        return scan_binary(path)
     if name in KEYSTORE_NAMES or name.endswith(KEYSTORE_EXT) or head[:4] == b"\xfe\xed\xfe\xed":
         return scan_bundle(path)
-    if st.st_size <= TEXT_LIMIT and (b"-----BEGIN CERTIFICATE-----" in head or b"BEGIN TRUSTED CERTIFICATE" in head
-                                     or name.endswith((".pem", ".crt", ".cer"))):
+    if b"\x00" in head:
+        return []
+    if st.st_size > TEXT_LIMIT:
+        if name.endswith((".pem", ".crt", ".cer")):
+            skipped.append(path)
+        return []
+    if name.endswith((".pem", ".crt", ".cer")):
         return scan_bundle(path)
+    with open(path, "rb") as f:
+        if b"-----BEGIN CERTIFICATE-----" in f.read():
+            return scan_bundle(path)
     return []
 
 
 def main():
     paths = sys.argv[1:]
-    if not paths:
+    if not paths or paths[0] in ("-h", "--help"):
         print(__doc__)
         return 2
     risky = starred = 0
     seen = set()
+    skipped = []
     for top in paths:
         for p in walk(top):
             real = os.path.realpath(p)
             if real in seen:
                 continue
             seen.add(real)
-            for level, msg in classify(p):
+            for level, msg in classify(p, skipped):
                 risky += level.startswith("TRUSTS")
                 starred += level == "TRUSTS*"
                 print(f"{level:<8} {p}\n         {msg}")
+    for p in skipped:
+        print(f"skipped  {p}\n         larger than the scan limit, not checked")
     print(f"\n{risky} finding(s) that still trust a chain through the compromised keys.")
     if starred:
         print("TRUSTS*: safe only if every trust store the program reads at run time is fixed.")
+    print("No finding is not proof: only the bundle, keystore and binary formats listed in --help are checked.")
     return 1 if risky else 0
 
 

@@ -5,3 +5,4 @@ ok       gotls-go1.26.10
 
 1 finding(s) that still trust a chain through the compromised keys.
 TRUSTS*: safe only if every trust store the program reads at run time is fixed.
+No finding is not proof: only the bundle, keystore and binary formats listed in --help are checked.
