@@ -31,6 +31,7 @@ python3 scripts/06_scan_chains.py   # chains served by the Tranco top 20,000 (li
 python3 scripts/07_aaa_impact.py    # those chains vs the Debian 12 bundle before/after the fix
 python3 scripts/08_gnutls_check.py  # jisc.ac.uk + 20 strict-mode breaks with git (GnuTLS)
 scripts/09_go_check.sh              # one HTTPS client built with Go 1.26.9 and 1.26.10
+python3 scripts/aaa_trust_history.py # Mozilla's TLS trust for AAA and emSign G3 over time
 ```
 
 Needs Python 3.9+, the OpenSSL 3 CLI, `zstd` (for one RPM), and for stage 7 a C compiler and the OpenSSL headers (`tools/chainverify.c`). Stage 2 downloads about 150 MB (three of them JREs) and stage 9 about 130 MB (two Go toolchains); raw downloads are deleted after use.
@@ -58,6 +59,8 @@ Recorded on 30 October 2026 from one Debian 12 machine (arm64, OpenSSL 3.0.22). 
 - **Stage 7.** Against Debian 12's bundle before and after the fix (Debian 13's are the same certificates): 16,125 chains verified before the fix with OpenSSL 3 defaults, and 1 failed after it (`jisc.ac.uk`, which sends only an AAA cross-sign of `SSL.com TLS Issuing ECC CA R2`). With trusted-first off, still 1. With trusted-first and alternative chains both off ("strict"), 262. 283 chains include a certificate issued by AAA; none was anchored at emSign ECC Root CA - G3; 47 were anchored at emSign Root CA - G1.
 - **Stage 8.** git 2.39.5 (GnuTLS 3.7.9) agreed: `jisc.ac.uk` rejected after the fix, a seeded sample of 20 of the other 261 strict-mode breaks all still accepted.
 - **Stage 9.** The same Go client built with Go 1.26.9 accepted both test chains with the old Debian 12 bundle; built with 1.26.10 it rejected both (`x509: no valid chains built`). Both failed on `jisc.ac.uk` with the fixed bundle. `scan-tree.py` flags the 1.26.9 binary and finds the blocklist in the 1.26.10 one.
+
+- **Mozilla's data.** NSS builtins 2.74 (January 2025) trusts `Comodo AAA Services root` for server authentication; 2.76 (NSS 3.111, April 2025) does not. Debian's `20250419` bundle is built from 2.74 ([`results/aaa-trust-history.txt`](results/aaa-trust-history.txt)).
 
 `STAMPS.sha256` holds the SHA-256 of the code, the inputs and every result file (`scripts/stamp.sh`).
 

@@ -1,0 +1,12 @@
+49af430cb498 (2025-01-29 land NSS_3_108_BETA5): builtins 2.74
+  Comodo AAA Services root: server_auth=CKT_NSS_TRUSTED_DELEGATOR email=CKT_NSS_TRUSTED_DELEGATOR
+  emSign ECC Root CA - G3: server_auth=CKT_NSS_TRUSTED_DELEGATOR email=CKT_NSS_TRUSTED_DELEGATOR
+dff41e53a155 (2025-04-22 land NSS_3_111_BETA1): builtins 2.76
+  Comodo AAA Services root: server_auth=CKT_NSS_MUST_VERIFY_TRUST email=CKT_NSS_TRUSTED_DELEGATOR
+  emSign ECC Root CA - G3: server_auth=CKT_NSS_TRUSTED_DELEGATOR email=CKT_NSS_TRUSTED_DELEGATOR
+f6dd0159931e (2026-09-08 upgrade NSS): builtins 2.90
+  Comodo AAA Services root: server_auth=CKT_NSS_MUST_VERIFY_TRUST email=CKT_NSS_TRUSTED_DELEGATOR
+  emSign ECC Root CA - G3: server_auth=CKT_NSS_TRUSTED_DELEGATOR email=CKT_NSS_TRUSTED_DELEGATOR
+7ff62457dcf1 (2026-10-21 upgrade NSS to NSS_3_132_RTM): builtins 2.92
+  Comodo AAA Services root: server_auth=CKT_NSS_MUST_VERIFY_TRUST email=CKT_NSS_TRUSTED_DELEGATOR
+  emSign ECC Root CA - G3: not present
