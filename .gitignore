@@ -1,0 +1,5 @@
+work/
+certs/
+stores/
+__pycache__/
+*.pyc

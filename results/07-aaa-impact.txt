@@ -1,0 +1,4 @@
+Tranco PYK6J top 20000: 16348 answered; 1296 Sectigo-family chains; 283 send a certificate issued by AAA
+modern   verified before fix  16125  anchored at AAA     1  break after fix    1  by anchor {'AAA Certificate Services': 1}
+nofirst  verified before fix  16124  anchored at AAA   262  break after fix    1  by anchor {'AAA Certificate Services': 1}
+strict   verified before fix  16111  anchored at AAA   262  break after fix  262  by anchor {'AAA Certificate Services': 262}

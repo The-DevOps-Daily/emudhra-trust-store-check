@@ -1,0 +1,1237 @@
+{
+ "alpine-3.18": {
+  "family": "Alpine 3.18",
+  "version": "20241121-r1",
+  "fix_status": "nofix",
+  "certificates": 149,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": true
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": true,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "alpine-3.19": {
+  "family": "Alpine 3.19",
+  "version": "20250911-r0",
+  "fix_status": "nofix",
+  "certificates": 146,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "alpine-3.22-fixed": {
+  "family": "Alpine 3.22",
+  "version": "20261020-r0",
+  "fix_status": "fixed",
+  "certificates": 118,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "bun-1.4.3": {
+  "family": "Bun bundled roots",
+  "version": "1.4.3",
+  "fix_status": "before",
+  "certificates": 121,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "bun-1.4.4": {
+  "family": "Bun bundled roots",
+  "version": "1.4.4",
+  "fix_status": "fixed",
+  "certificates": 118,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "certifi-2025.8.3": {
+  "family": "Python certifi",
+  "version": "2025.8.3",
+  "fix_status": "before",
+  "certificates": 145,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "certifi-2026.10.18": {
+  "family": "Python certifi",
+  "version": "2026.10.18",
+  "fix_status": "before",
+  "certificates": 117,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "certifi-2026.10.19": {
+  "family": "Python certifi",
+  "version": "2026.10.19",
+  "fix_status": "fixed",
+  "certificates": 120,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "certifi-2026.7.22": {
+  "family": "Python certifi",
+  "version": "2026.7.22",
+  "fix_status": "before",
+  "certificates": 121,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "curl-2026-09-25": {
+  "family": "curl CA bundle",
+  "version": "2026-09-25",
+  "fix_status": "before",
+  "certificates": 121,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "curl-2026-10-20": {
+  "family": "curl CA bundle",
+  "version": "2026-10-20",
+  "fix_status": "fixed",
+  "certificates": 118,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "debian-11": {
+  "family": "Debian 11 bullseye",
+  "version": "20250419~deb12u1~deb11u1",
+  "fix_status": "nofix",
+  "certificates": 150,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": true
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": true,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "debian-12-before": {
+  "family": "Debian 12 bookworm",
+  "version": "20250419~deb12u1",
+  "fix_status": "before",
+  "certificates": 150,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": true
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": true,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "debian-12-fixed": {
+  "family": "Debian 12 bookworm",
+  "version": "20250419~deb12u2",
+  "fix_status": "fixed",
+  "certificates": 148,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "debian-13-before": {
+  "family": "Debian 13 trixie",
+  "version": "20250419",
+  "fix_status": "before",
+  "certificates": 150,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": true
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": true,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "debian-13-fixed": {
+  "family": "Debian 13 trixie",
+  "version": "20250419+deb13u1",
+  "fix_status": "fixed",
+  "certificates": 148,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "debian-sid-20260816": {
+  "family": "Debian sid",
+  "version": "20260816",
+  "fix_status": "before",
+  "certificates": 121,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "node-20.20.2": {
+  "family": "Node.js bundled roots",
+  "version": "20.20.2",
+  "fix_status": "nofix",
+  "certificates": 144,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "node-22.23.3": {
+  "family": "Node.js bundled roots",
+  "version": "22.23.3",
+  "fix_status": "before",
+  "certificates": 119,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "node-22.23.4": {
+  "family": "Node.js bundled roots",
+  "version": "22.23.4",
+  "fix_status": "fixed",
+  "certificates": 116,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "node-24.22.0": {
+  "family": "Node.js bundled roots",
+  "version": "24.22.0",
+  "fix_status": "before",
+  "certificates": 121,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "node-24.22.1": {
+  "family": "Node.js bundled roots",
+  "version": "24.22.1",
+  "fix_status": "fixed",
+  "certificates": 118,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "openjdk-21u-before": {
+  "family": "OpenJDK jdk21u source cacerts",
+  "version": "7b24768d83",
+  "fix_status": "before",
+  "certificates": 110,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": true
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign Root CA - G1",
+   "emSign Root CA - G2"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": true,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "openjdk-21u-fixed": {
+  "family": "OpenJDK jdk21u source cacerts",
+  "version": "d339d5921f",
+  "fix_status": "fixed",
+  "certificates": 106,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "rhel-9-before": {
+  "family": "RHEL 9 family (AlmaLinux build)",
+  "version": "2025.2.80_v9.0.305-91.el9",
+  "fix_status": "before",
+  "certificates": 146,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "rhel-9-fixed": {
+  "family": "RHEL 9 (UBI 9)",
+  "version": "2026.2.92_v9.0.319-90.3.el9_8",
+  "fix_status": "fixed",
+  "certificates": 118,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "temurin-11.0.32.1": {
+  "family": "Eclipse Temurin 11 JRE cacerts",
+  "version": "11.0.32.1+1",
+  "fix_status": "nofix",
+  "certificates": 118,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "temurin-21.0.12.1": {
+  "family": "Eclipse Temurin JRE cacerts",
+  "version": "21.0.12.1+1",
+  "fix_status": "before",
+  "certificates": 118,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "temurin-21.0.13": {
+  "family": "Eclipse Temurin JRE cacerts",
+  "version": "21.0.13+9",
+  "fix_status": "current",
+  "certificates": 118,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "ubuntu-22.04-before": {
+  "family": "Ubuntu 22.04",
+  "version": "20260601~22.04.1",
+  "fix_status": "before",
+  "certificates": 121,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "ubuntu-22.04-fixed": {
+  "family": "Ubuntu 22.04",
+  "version": "20260816ubuntu0.22.04.1",
+  "fix_status": "fixed",
+  "certificates": 120,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "ubuntu-24.04-before": {
+  "family": "Ubuntu 24.04",
+  "version": "20260601~24.04.1",
+  "fix_status": "before",
+  "certificates": 121,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ },
+ "ubuntu-24.04-fixed": {
+  "family": "Ubuntu 24.04",
+  "version": "20260816ubuntu0.24.04.1",
+  "fix_status": "fixed",
+  "certificates": 120,
+  "holds": {
+   "emsign_ecc_root_g3": false,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": false
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": false,
+  "predict_aaa_path": false,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": false,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": false
+  }
+ },
+ "ubuntu-24.04-release": {
+  "family": "Ubuntu 24.04 (release pocket)",
+  "version": "20240203",
+  "fix_status": "before",
+  "certificates": 146,
+  "holds": {
+   "emsign_ecc_root_g3": true,
+   "emsign_root_tls_g3": false,
+   "aaa_certificate_services": true
+  },
+  "holds_compromised_key_itself": false,
+  "other_emsign_roots": [
+   "emSign ECC Root CA - C3",
+   "emSign Root CA - C1",
+   "emSign Root CA - G1"
+  ],
+  "predict_emsign_path": true,
+  "predict_aaa_path": true,
+  "predictions": {
+   "certs/chains/regular--dv-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-aaa-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3b-noct-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--dv-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ev-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3b-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-aaa-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/regular--ov-g3c-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-aaa-noct-rollover-emudhra.we-have-a-problem.com.pem": true,
+   "certs/chains/rollover--dv-g3b-noct-rollover-emudhra.we-have-a-problem.com.pem": true
+  }
+ }
+}

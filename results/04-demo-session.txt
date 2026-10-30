@@ -1,0 +1,8 @@
+$ openssl verify -no-CApath -no-CAstore -attime 1793318400 -CAfile debian-12-before.pem -untrusted aaa-chain.pem aaa-chain.pem
+aaa-chain.pem: OK
+$ openssl verify -no-CApath -no-CAstore -attime 1793318400 -CAfile minus-emsign.pem -untrusted aaa-chain.pem aaa-chain.pem
+aaa-chain.pem: OK
+$ openssl verify -no-CApath -no-CAstore -attime 1793318400 -CAfile debian-12-fixed.pem -untrusted aaa-chain.pem aaa-chain.pem
+C = NL, O = eMudhra BV, CN = EM DV TLS CA - G3B
+error 20 at 1 depth lookup: unable to get local issuer certificate
+error aaa-chain.pem: verification failed

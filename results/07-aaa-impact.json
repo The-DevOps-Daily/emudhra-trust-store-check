@@ -1,0 +1,78 @@
+{
+ "tranco_list": "PYK6J",
+ "top": 20000,
+ "scan_started": "2026-10-30T11:11:42Z",
+ "scan_finished": "2026-10-30T11:36:04Z",
+ "verified_at_epoch": 1793358702,
+ "domains": 20000,
+ "answered": 16348,
+ "sectigo_family_chains": 1296,
+ "chains_with_a_cert_issued_by_AAA": 283,
+ "modes": {
+  "modern": {
+   "verified_before_fix": 16125,
+   "anchored_at_AAA_before_fix": 1,
+   "break_after_fix": 1,
+   "breaks_by_anchor_before_fix": {
+    "AAA Certificate Services": 1
+   },
+   "sectigo_family_verified_before_fix": 1258,
+   "sectigo_family_break_after_fix": 1
+  },
+  "nofirst": {
+   "verified_before_fix": 16124,
+   "anchored_at_AAA_before_fix": 262,
+   "break_after_fix": 1,
+   "breaks_by_anchor_before_fix": {
+    "AAA Certificate Services": 1
+   },
+   "sectigo_family_verified_before_fix": 1257,
+   "sectigo_family_break_after_fix": 1
+  },
+  "strict": {
+   "verified_before_fix": 16111,
+   "anchored_at_AAA_before_fix": 262,
+   "break_after_fix": 262,
+   "breaks_by_anchor_before_fix": {
+    "AAA Certificate Services": 262
+   },
+   "sectigo_family_verified_before_fix": 1257,
+   "sectigo_family_break_after_fix": 262
+  }
+ },
+ "break_examples": {
+  "modern": [
+   "jisc.ac.uk"
+  ],
+  "nofirst": [
+   "jisc.ac.uk"
+  ],
+  "strict": [
+   "triplinkintl.com",
+   "example.com",
+   "quickconnect.to",
+   "namecheap.com",
+   "ip-api.com",
+   "stanford.edu",
+   "teamviewer.com",
+   "miit.gov.cn",
+   "2gis.com",
+   "360.cn",
+   "mediafire.com",
+   "sentinelone.net",
+   "sedo.com",
+   "fwmrm.net",
+   "statcounter.com",
+   "ahacdn.me",
+   "megafon.ru",
+   "threema.ch",
+   "cdiscount.com",
+   "visa.cn",
+   "inps.it",
+   "ilmeteo.it",
+   "iana.org",
+   "testbook.com",
+   "ucsd.edu"
+  ]
+ }
+}

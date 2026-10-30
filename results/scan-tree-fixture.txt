@@ -1,0 +1,13 @@
+TRUSTS   fixture/etc/ssl/certs/ca-certificates.crt
+         CA bundle with 150 certificates holds emSign ECC Root CA - G3 and AAA Certificate Services
+TRUSTS   fixture/usr/local/bin/node
+         embeds emSign ECC Root CA - G3 in its bundled roots
+TRUSTS*  fixture/usr/lib/python3.11/lib-dynload/_ssl.cpython-311-aarch64-linux-gnu.so
+         CPython ssl module without the eMudhra blocklist: it accepts whatever its trust store accepts
+TRUSTS   fixture/usr/lib/jvm/temurin-11/lib/security/cacerts
+         CA bundle with 118 certificates holds emSign ECC Root CA - G3
+ok       fixture/opt/node-24.22.1/bin/node
+         carries the eMudhra SPKI blocklist (all 8 keys)
+
+4 finding(s) that still trust a chain through the compromised keys.
+TRUSTS*: safe only if every trust store the program reads at run time is fixed.

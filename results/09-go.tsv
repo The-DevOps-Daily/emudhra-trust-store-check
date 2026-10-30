@@ -1,0 +1,9 @@
+go	trust_source	host	result	detail
+go1.26.9	SSL_CERT_FILE=stores/debian-12-before.pem	dv-g3b-emudhra.we-have-a-problem.com	ACCEPT	HTTP 200
+go1.26.9	SSL_CERT_FILE=stores/debian-12-before.pem	dv-g3b-aaa-emudhra.we-have-a-problem.com	ACCEPT	HTTP 200
+go1.26.9	SSL_CERT_FILE=stores/debian-12-before.pem	jisc.ac.uk	ACCEPT	HTTP 403
+go1.26.9	SSL_CERT_FILE=stores/debian-12-fixed.pem	jisc.ac.uk	reject	Get "https://jisc.ac.uk/": tls: failed to verify certificate: x509: certificate signed by unknown authority
+go1.26.10	SSL_CERT_FILE=stores/debian-12-before.pem	dv-g3b-emudhra.we-have-a-problem.com	reject	Get "https://dv-g3b-emudhra.we-have-a-problem.com/": tls: failed to verify certificate: x509: no valid chains built
+go1.26.10	SSL_CERT_FILE=stores/debian-12-before.pem	dv-g3b-aaa-emudhra.we-have-a-problem.com	reject	Get "https://dv-g3b-aaa-emudhra.we-have-a-problem.com/": tls: failed to verify certificate: x509: no valid chains built
+go1.26.10	SSL_CERT_FILE=stores/debian-12-before.pem	jisc.ac.uk	ACCEPT	HTTP 403
+go1.26.10	SSL_CERT_FILE=stores/debian-12-fixed.pem	jisc.ac.uk	reject	Get "https://jisc.ac.uk/": tls: failed to verify certificate: x509: certificate signed by unknown authority

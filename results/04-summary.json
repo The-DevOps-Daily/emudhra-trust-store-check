@@ -1,0 +1,177 @@
+{
+ "alpine-3.18": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "8/8",
+  "mismatches": 0
+ },
+ "alpine-3.19": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "alpine-3.22-fixed": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "bun-1.4.3": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "bun-1.4.4": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "certifi-2025.8.3": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "certifi-2026.10.18": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "certifi-2026.10.19": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "certifi-2026.7.22": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "curl-2026-09-25": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "curl-2026-10-20": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "debian-11": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "8/8",
+  "mismatches": 0
+ },
+ "debian-12-before": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "8/8",
+  "mismatches": 0
+ },
+ "debian-12-fixed": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "debian-13-before": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "8/8",
+  "mismatches": 0
+ },
+ "debian-13-fixed": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "debian-sid-20260816": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "node-20.20.2": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "node-22.23.3": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "node-22.23.4": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "node-24.22.0": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "node-24.22.1": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "openjdk-21u-before": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "8/8",
+  "mismatches": 0
+ },
+ "openjdk-21u-fixed": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "rhel-9-before": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "rhel-9-fixed": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "temurin-11.0.32.1": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "temurin-21.0.12.1": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "temurin-21.0.13": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "ubuntu-22.04-before": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "ubuntu-22.04-fixed": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "ubuntu-24.04-before": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "ubuntu-24.04-fixed": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "0/8",
+  "mismatches": 0
+ },
+ "ubuntu-24.04-release": {
+  "emsign_path_accepted": "8/8",
+  "aaa_path_accepted": "8/8",
+  "mismatches": 0
+ },
+ "SYNTHETIC-debian-12-before-minus-emsign-g3": {
+  "emsign_path_accepted": "0/8",
+  "aaa_path_accepted": "8/8",
+  "mismatches": 0
+ }
+}

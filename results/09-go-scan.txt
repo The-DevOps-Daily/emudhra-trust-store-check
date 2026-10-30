@@ -1,0 +1,7 @@
+TRUSTS*  gotls-go1.26.9
+         Go program (go1.26.9) with crypto/x509 and no eMudhra blocklist: it accepts whatever its trust store accepts
+ok       gotls-go1.26.10
+         carries the eMudhra SPKI blocklist (all 8 keys)
+
+1 finding(s) that still trust a chain through the compromised keys.
+TRUSTS*: safe only if every trust store the program reads at run time is fixed.

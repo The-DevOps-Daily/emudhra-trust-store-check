@@ -1,0 +1,4 @@
+$ SSL_CERT_FILE=debian-12-before.pem SSL_CERT_DIR=/nonexistent ./node-24.22.0 --use-openssl-ca get.js dv-g3b-aaa-emudhra.we-have-a-problem.com
+ACCEPT HTTP 200
+$ SSL_CERT_FILE=debian-12-before.pem SSL_CERT_DIR=/nonexistent ./node-24.22.1 --use-openssl-ca get.js dv-g3b-aaa-emudhra.we-have-a-problem.com
+reject CERT_REVOKED: certificate revoked

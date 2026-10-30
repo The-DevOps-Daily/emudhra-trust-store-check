@@ -1,0 +1,21 @@
+client	version	trust_source	host	result	detail
+curl	7.88.1	--cacert stores/debian-12-before.pem	dv-g3b-emudhra.we-have-a-problem.com	ACCEPT	HTTP 200
+curl	7.88.1	--cacert stores/debian-12-before.pem	dv-g3b-aaa-emudhra.we-have-a-problem.com	ACCEPT	HTTP 200
+curl	7.88.1	--cacert stores/debian-12-fixed.pem	dv-g3b-emudhra.we-have-a-problem.com	reject	curl: (60) SSL certificate problem: unable to get local issuer certificate More details here: https://curl.se/docs/sslcerts.html  curl failed to verify the legitimacy of the server and therefore could not establish a secure connection to it. To learn more about this situation and how to fix it, please visit the web page mentioned above. 
+curl	7.88.1	--cacert stores/debian-12-fixed.pem	dv-g3b-aaa-emudhra.we-have-a-problem.com	reject	curl: (60) SSL certificate problem: unable to get local issuer certificate More details here: https://curl.se/docs/sslcerts.html  curl failed to verify the legitimacy of the server and therefore could not establish a secure connection to it. To learn more about this situation and how to fix it, please visit the web page mentioned above. 
+curl	7.88.1	--cacert stores/ubuntu-24.04-before.pem	dv-g3b-emudhra.we-have-a-problem.com	ACCEPT	HTTP 200
+curl	7.88.1	--cacert stores/ubuntu-24.04-before.pem	dv-g3b-aaa-emudhra.we-have-a-problem.com	reject	curl: (60) SSL certificate problem: unable to get local issuer certificate More details here: https://curl.se/docs/sslcerts.html  curl failed to verify the legitimacy of the server and therefore could not establish a secure connection to it. To learn more about this situation and how to fix it, please visit the web page mentioned above. 
+python3	3.11.2 3.0.22	cafile=stores/debian-12-before.pem	dv-g3b-emudhra.we-have-a-problem.com	ACCEPT	HTTP 200
+python3	3.11.2 3.0.22	cafile=stores/debian-12-before.pem	dv-g3b-aaa-emudhra.we-have-a-problem.com	ACCEPT	HTTP 200
+python3	3.11.2 3.0.22	cafile=stores/certifi-2026.7.22.pem	dv-g3b-emudhra.we-have-a-problem.com	ACCEPT	HTTP 200
+python3	3.11.2 3.0.22	cafile=stores/certifi-2026.7.22.pem	dv-g3b-aaa-emudhra.we-have-a-problem.com	reject	URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)
+python3	3.11.2 3.0.22	cafile=stores/certifi-2026.10.19.pem	dv-g3b-emudhra.we-have-a-problem.com	reject	URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)
+python3	3.11.2 3.0.22	cafile=stores/certifi-2026.10.19.pem	dv-g3b-aaa-emudhra.we-have-a-problem.com	reject	URLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:992)
+node	v24.22.1	bundled roots (default)	dv-g3b-emudhra.we-have-a-problem.com	reject	CERT_REVOKED: certificate revoked
+node	v24.22.1	bundled roots (default)	dv-g3b-aaa-emudhra.we-have-a-problem.com	reject	CERT_REVOKED: certificate revoked
+node	v24.22.1	--use-openssl-ca, SSL_CERT_FILE=stores/debian-12-before.pem	dv-g3b-emudhra.we-have-a-problem.com	reject	CERT_REVOKED: certificate revoked
+node	v24.22.1	--use-openssl-ca, SSL_CERT_FILE=stores/debian-12-before.pem	dv-g3b-aaa-emudhra.we-have-a-problem.com	reject	CERT_REVOKED: certificate revoked
+node	v24.22.0	bundled roots (default)	dv-g3b-emudhra.we-have-a-problem.com	ACCEPT	HTTP 200
+node	v24.22.0	bundled roots (default)	dv-g3b-aaa-emudhra.we-have-a-problem.com	reject	UNABLE_TO_GET_ISSUER_CERT_LOCALLY: unable to get local issuer certificate
+node	v24.22.0	--use-openssl-ca, SSL_CERT_FILE=stores/debian-12-before.pem	dv-g3b-emudhra.we-have-a-problem.com	ACCEPT	HTTP 200
+node	v24.22.0	--use-openssl-ca, SSL_CERT_FILE=stores/debian-12-before.pem	dv-g3b-aaa-emudhra.we-have-a-problem.com	ACCEPT	HTTP 200

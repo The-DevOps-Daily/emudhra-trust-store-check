@@ -1,0 +1,23 @@
+# git version 2.39.5; seed 20261030; the 1 modern-mode break(s), plus a sample of 20 from the 261 other strict-mode breaks
+host	group	before_fix	after_fix	after_fix_output
+jisc.ac.uk	modern-break	chain ok	chain rejected	fatal: unable to access 'https://jisc.ac.uk/': server certificate verification failed. CAfile: stores/debian-12-fixed.pem CRLfile: none
+adtidy.org	strict-break	chain ok	chain ok	fatal: repository 'https://adtidy.org/' not found
+apkpure.com	strict-break	chain ok	chain ok	fatal: repository 'https://apkpure.com/' not found
+cnolnic.net	strict-break	chain ok	chain ok	fatal: repository 'https://cnolnic.net/' not found
+doximity.com	strict-break	chain ok	chain ok	fatal: repository 'https://doximity.com/' not found
+estama.jp	strict-break	chain ok	chain ok	fatal: repository 'https://estama.jp/' not found
+extcam.com	strict-break	chain ok	chain ok	fatal: unable to access 'https://extcam.com/': SSL: certificate subject name (*.ivideon.com) does not match target host name 'extcam.com'
+fwmrm.net	strict-break	chain ok	chain ok	fatal: repository 'https://fwmrm.net/' not found
+ip-api.com	strict-break	chain ok	chain ok	fatal: unable to update url base from redirection:   asked for: https://ip-api.com/info/refs?service=git-upload-pack    redirect: https://ip-api.com/
+lululemon.com	strict-break	chain ok	chain ok	fatal: unable to access 'https://lululemon.com/': The requested URL returned error: 403
+mediav.com	strict-break	chain ok	chain ok	fatal: repository 'https://mediav.com/' not found
+monash.edu	strict-break	chain ok	chain ok	fatal: unable to access 'https://monash.edu/': The requested URL returned error: 403
+monitoring360.io	strict-break	chain ok	chain ok	fatal: repository 'https://monitoring360.io/' not found
+ou.edu	strict-break	chain ok	chain ok	fatal: repository 'https://ou.edu/' not found
+penzcentrum.hu	strict-break	chain ok	chain ok	fatal: repository 'https://penzcentrum.hu/' not found
+phanet.de	strict-break	chain ok	chain ok	fatal: unable to access 'https://phanet.de/': The requested URL returned error: 503
+quickconnect.to	strict-break	chain ok	chain ok	fatal: unable to update url base from redirection:   asked for: https://quickconnect.to/info/refs?service=git-upload-pack    redirect: http://info.quickconnect.to/https_first/refs?service=git-upload-p
+theepochtimes.com	strict-break	chain ok	chain ok	fatal: repository 'https://theepochtimes.com/' not found
+threema.ch	strict-break	chain ok	chain ok	fatal: repository 'https://threema.ch/' not found
+timeanddate.com	strict-break	chain ok	chain ok	fatal: unable to access 'https://timeanddate.com/': The requested URL returned error: 403
+updatestar.com	strict-break	chain ok	chain ok	fatal: repository 'https://updatestar.com/' not found
