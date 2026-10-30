@@ -13,7 +13,7 @@ mkdir rootfs && docker export "$(docker create IMAGE)" | tar -xf - -C rootfs
 python3 scripts/scan-tree.py rootfs
 ```
 
-`scan-tree.py` is stdlib-only Python 3.9+. It reports PEM bundles and Java keystores (JKS, password-less PKCS#12) that still hold `emSign ECC Root CA - G3` or `AAA Certificate Services`, binaries that embed either root (old Node.js and Bun builds), runtimes that carry all eight keys of the eMudhra SPKI blocklist, and Go programs, Node.js, Bun and CPython `ssl` binaries that do not. A binary with only part of the list is flagged. Exit status 1 means something still trusts a chain. Files over its size limits are listed as skipped, and no finding is not proof: it only knows these formats. [`results/scan-tree-fixture.txt`](results/scan-tree-fixture.txt) is its output on a test tree, and `python3 -m unittest discover -s tests` runs its tests on synthetic files.
+`scan-tree.py` is stdlib-only Python 3.9+. It reports PEM bundles and Java keystores (JKS, password-less PKCS#12) that still hold `emSign ECC Root CA - G3` or `AAA Certificate Services`, binaries that embed either root (old Node.js and Bun builds), binaries that hold all eight keys of the eMudhra SPKI blocklist (a byte match, not a runtime test), and Go programs, Node.js, Bun and CPython `ssl` binaries that do not. A binary with only part of the list is flagged. Exit status 1 means something still trusts a chain. Files over its size limits are listed as skipped, and no finding is not proof: it only knows these formats. [`results/scan-tree-fixture.txt`](results/scan-tree-fixture.txt) is its output on a test tree, and `python3 -m unittest discover -s tests` runs its tests on synthetic files.
 
 Only public certificate files are used. Nothing here generates, uses or stores a private key.
 
@@ -23,7 +23,7 @@ Each stage writes a file the next stage reads, so any stage can be re-run on its
 
 ```bash
 python3 scripts/01_fetch_certs.py   # public certs + test chains; cross-checks vs Bugzilla, Go, Node, CPython
-python3 scripts/02_fetch_stores.py  # trust stores in stores.tsv, from package files (no containers)
+python3 scripts/02_fetch_stores.py  # trust stores in stores.tsv: packages, bundles, source trees (no containers)
 python3 scripts/03_inspect.py       # which root each store holds; predicts every verify result
 python3 scripts/04_verify.py        # openssl verify, every chain x every store, vs the prediction
 scripts/05_live.sh [old-node]       # real curl, python3 and node against the public test hosts

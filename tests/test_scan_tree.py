@@ -73,10 +73,25 @@ class ScanTreeTest(unittest.TestCase):
     def test_bundle_without_the_roots_is_silent(self):
         self.assertEqual(self.scan("empty.pem", b"# no certificates here\n")[0], [])
 
-    def test_oversized_pem_is_reported_as_skipped(self):
-        levels, skipped = self.scan("huge.pem", b"x" * (st.TEXT_LIMIT + 1))
+    def test_oversized_bundle_without_extension_is_reported_as_skipped(self):
+        limit = st.TEXT_LIMIT
+        st.TEXT_LIMIT = 4096
+        try:
+            data = ("# comment\n" * 600 + pem(AAA_B64)).encode()
+            levels, skipped = self.scan("roots-bundle", data)
+        finally:
+            st.TEXT_LIMIT = limit
         self.assertEqual(levels, [])
         self.assertEqual(len(skipped), 1)
+
+    def test_large_text_without_certificates_is_ignored(self):
+        limit = st.TEXT_LIMIT
+        st.TEXT_LIMIT = 4096
+        try:
+            levels, skipped = self.scan("app.log", b"log line\n" * 2000)
+        finally:
+            st.TEXT_LIMIT = limit
+        self.assertEqual((levels, skipped), ([], []))
 
 
 if __name__ == "__main__":

@@ -56,7 +56,7 @@ BLOCKED_SPKI = [
 SKIP_DIRS = {"proc", "sys", "dev", "run"}
 KEYSTORE_NAMES = ("cacerts", "jssecacerts")
 KEYSTORE_EXT = (".jks", ".p12", ".pfx", ".keystore", ".truststore")
-TEXT_LIMIT = 8 * 1024 * 1024
+TEXT_LIMIT = 256 * 1024 * 1024  # largest text bundle that is parsed
 BINARY_LIMIT = 512 * 1024 * 1024
 
 ROOT_NEEDLES = {}
@@ -104,7 +104,7 @@ def scan_binary(path):
             runtime = next((label for marker, label in RUNTIME_MARKERS if mm.find(marker) >= 0), None) or runtime_by_name(path)
     if keys == len(SPKI_NEEDLES):
         extra = f"; it also embeds {' and '.join(embeds)}, but rejects the keys" if embeds else ""
-        return [("ok", f"carries the eMudhra SPKI blocklist (all {keys} keys){extra}")]
+        return [("ok", f"holds all {keys} eMudhra blocklist keys (a byte match, not a runtime test){extra}")]
     found = []
     if embeds:
         found.append(("TRUSTS", f"embeds {' and '.join(embeds)} in its bundled roots"))
@@ -173,16 +173,15 @@ def classify(path, skipped):
         return scan_bundle(path)
     if b"\x00" in head:
         return []
-    if st.st_size > TEXT_LIMIT:
-        if name.endswith((".pem", ".crt", ".cer")):
-            skipped.append(path)
-        return []
-    if name.endswith((".pem", ".crt", ".cer")):
-        return scan_bundle(path)
     with open(path, "rb") as f:
-        if b"-----BEGIN CERTIFICATE-----" in f.read():
-            return scan_bundle(path)
-    return []
+        with mmap.mmap(f.fileno(), 0, access=mmap.ACCESS_READ) as mm:
+            has_pem = mm.find(b"-----BEGIN CERTIFICATE-----") >= 0 or mm.find(b"-----BEGIN TRUSTED CERTIFICATE-----") >= 0
+    if not has_pem and not name.endswith((".pem", ".crt", ".cer")):
+        return []
+    if st.st_size > TEXT_LIMIT:
+        skipped.append(path)
+        return []
+    return scan_bundle(path)
 
 
 def main():
